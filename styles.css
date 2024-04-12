@@ -1,0 +1,202 @@
+/* main{
+    display: flex;
+    
+    
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.left{
+    flex:30%;
+    background-image: url("images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+height: 100vh;
+}
+.right{
+    flex: 60%;
+    height: 100vh;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 500px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+.left {
+  flex: 30%;
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.right {
+  flex: 70%;
+  height: 100vh;
+}
+label {
+  display: block;
+  margin: 4% 5px 5px 5px;
+}
+label.expiry {
+  display: inline;
+}
+/* label.cvc{
+    display: inline-block;
+} */
+
+form {
+  /* border: 1px solid red; */
+  width: 30vw;
+  height: 50vh;
+  /* transform: translate(300px, 200px); */
+  color: hsl(278, 68%, 11%);
+  margin-left: 250px;
+  /* display: none; */
+}
+.hidden{
+  display: none;
+}
+.yy,.mm,.cv{
+  display: inline;
+}
+
+form p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: none;
+  color: red;
+}
+form button {
+  width: 25vw;
+  align-self: center;
+  height: 33px;
+  margin-top: 5%;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+}
+input.cardNumber {
+  margin-bottom: 4%;
+}
+
+input {
+  margin: 4% 5px 5px 5px;
+  height: 33px;
+  padding-left: 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  border: 1px solid hsl(279, 6%, 55%);
+}
+
+.equal {
+  width: 25vw;
+}
+.cv {
+  margin-left: 10px;
+}
+label.cv {
+  padding-left: 30px;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+}
+.success {
+  text-align: center;
+ margin: auto;
+  
+}
+.success h1 {
+  margin: 5%;
+}
+.btn {
+  height: 33px;
+  width: 20vw;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.front {
+  height: 200px;
+  width: 350px;
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  top: 15vh;
+  left: 13vw;
+}
+.front img {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.front h1 {
+  margin-top: 15px;
+  margin-left: 15px;
+  letter-spacing: 5px;
+}
+.name-cv {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.name-cv {
+  margin: 10%;
+}
+
+.rear {
+  max-height: 200px;
+  max-width: 350px;
+  position: relative;
+  top: 25vh;
+  left: 20vw;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 5px -2px 6px hsl(270, 3%, 87%);
+}
+.rear img {
+  height: 200px;
+}
+.rear p {
+  position: relative;
+  top: -115px;
+  right: -290px;
+}
+.mm,.yy,.cc{
+  width:3rem;
+  display: inline;
+}
+
+@media screen and (max-width:1171px) {
+  form {
+    width: 60vw;
+    transform: unset;
+    margin: 30vh 25vw;
+  }
+  .rear {
+    top: -6vh;
+    left: 28vw;
+  }
+  .front {
+    top: 300px;
+    left: 13vw ;
+    z-index: 2;
+  }
+  .left,.right{
+    flex:100%;
+    width: 100vw;
+  }
+  *{
+    margin: 0;padding: 0;
+  }
+}

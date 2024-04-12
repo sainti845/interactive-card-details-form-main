@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Interactive card details form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="left">
+      <div class="front">
+          <img src="images/card-logo.svg" alt="logo">
+          <h1 id="cardNum">0000 0000 0000 0000</h1>
+          <div class="name-cv">
+            <p class="name">JANE APPLESEED</p>
+            <p class="expiryTime #date-exp">00/00</p>
+          </div>
+      </div>
+      <div class="rear">
+        <img src="images/bg-card-back.png" alt="">
+        <p id="backcvc">000</p>
+      </div>
+      
+      </section>
+      <section class="right">
+        <div class="details_form">
+        <form >
+          <label for="cardholder-name">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            id="cardholder-name"
+            name="CARDHOLDER_NAME"
+            class="equal"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="hidden err" id="err-name">Cannot be empty</p>
+          <label for="number">CARD NUMBER</label>
+          <input
+            type="text"
+            id="number" name="CARD_NUMBER"
+            class="equal cardNumber"
+            placeholder="e.g. 1234 5678 9123 1234"
+            minlength="19"
+            maxlength="19"
+          />
+          <p class="hidden err" id="err-num">Wrong format</p>
+          <div class="expiry">
+            <label for="expiry" class="expiry">EXP. DATE[MM/YY]</label>
+            <label for="cvc" placeholder="e.g. 123" class="expiry cv">CVC</label
+            ><br />
+            <input
+            type="number"
+             class="mm"
+              name="MM"
+              maxlength="2"
+              minlength="1"
+              
+              placeholder="MM"
+            />
+            <input
+            type="number"
+             class="yy"
+              name="YY"
+              
+              placeholder="YY"
+              maxlength="2"
+              minlength="1"
+            />
+            <input
+              
+              name="CVC"
+              maxlength="3"
+              minlength="3"
+              
+              placeholder="000"
+              class="cv"
+            />
+            <p class="hidden err" id="err-num">Invalid expiry</p>
+            <br />
+            <!-- <input type="submit" class="equal submit" value="CONFIRM" /> -->
+          <button type="submit" class="equal submit" value>CONFIRM</button>
+          </div>
+        </div>
+        <div class="success hidden">
+          <img src="images/icon-complete.svg" alt="Thank You" />
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+          <button class="btn">Continue</button></div>
+        </form>
+      </section>
+    
+    </div>
+    <script src="script.js"></script>
+    <!-- 0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm -->
+
+    <!-- Completed state start -->
+
+    <!-- Thank you!
+  We've added your card details
+  Continue
+   -->
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
